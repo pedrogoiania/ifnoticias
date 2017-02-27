@@ -30,4 +30,14 @@
         android:textSize="18sp"
         android:layout_below="@+id/Texto1"
         android:layout_alignStart="@+id/Texto1" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Texto2"
+        android:layout_alignStart="@+id/Texto2"
+        android:layout_marginTop="47dp"
+        android:id="@+id/Texto3"
+        android:textSize="18sp" />
 </RelativeLayout>
