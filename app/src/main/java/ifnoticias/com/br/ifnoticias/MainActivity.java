@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     TextView textView2;
+    TextView textView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.Texto1);
         textView2 = (TextView) findViewById(R.id.Texto2);
+        textView3 = (TextView) findViewById(R.id.Texto3);
 
         new ParsePage().execute();
     }
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             Document doc;
 
             try{
-                doc = Jsoup.connect("http://ifg.edu.br").get();
+                doc = Jsoup.connect("http://ifg.edu.br/goiania").get();
                 elements = doc.getElementsByClass("contentpagetitle");
 
             }catch (IOException e){
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
            textView.setText(arrayList.get(0).toString());
            textView2.setText(arrayList.get(1).toString());
+           textView3.setText(arrayList.get(2).toString());
 
         }
     }
