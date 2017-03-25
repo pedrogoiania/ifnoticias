@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             Document doc;
 
             try{
-                doc = Jsoup.connect("http://ifg.edu.br/goiania").get();
+                doc = Jsoup.connect("http://ifg.edu.br").get();
                 elements = doc.getElementsByClass("contentpagetitle");
 
             }catch (IOException e){
