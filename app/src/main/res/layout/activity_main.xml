@@ -11,33 +11,60 @@
     tools:context="ifnoticias.com.br.ifnoticias.MainActivity">
 
     <TextView
-        android:text="TextView"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Texto1"
-        android:textSize="18sp"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="27dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:background="@color/verdePrimario"
+        android:text="IFNotícias"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="40sp" />
 
-    <TextView
-        android:text="TextView"
+    <Button
+        android:id="@+id/principaisNoticiasButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Texto2"
-        android:textSize="18sp"
-        android:layout_marginTop="34dp"
-        android:layout_below="@+id/Texto1"
-        android:layout_alignStart="@+id/Texto1" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="28dp"
+        android:background="@color/verdeSecundario"
+        android:text="Principais Notícias"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-    <TextView
-        android:text="TextView"
+    <Button
+        android:id="@+id/comunicadosButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/Texto3"
-        android:textSize="18sp"
-        android:layout_marginTop="34dp"
-        android:layout_below="@+id/Texto2"
-        android:layout_alignStart="@+id/Texto2" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/principaisNoticiasButton"
+        android:layout_marginTop="19dp"
+        android:background="@color/verdeSecundario"
+        android:elevation="0dp"
+        android:text="Comunicados"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/sobreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        android:background="@color/verdeSecundario"
+        android:text="sobre"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold" />
 </RelativeLayout>

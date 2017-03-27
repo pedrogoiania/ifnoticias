@@ -4,71 +4,65 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
-    TextView textView;
-    TextView textView2;
-    TextView textView3;
+    Button principaisNoticiasButton;
+    Button comunicadosButton;
+    Button sobreButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = (TextView) findViewById(R.id.Texto1);
-        textView2 = (TextView) findViewById(R.id.Texto2);
-        textView3 = (TextView) findViewById(R.id.Texto3);
+        principaisNoticiasButton = (Button) findViewById(R.id.principaisNoticiasButton);
+        comunicadosButton = (Button) findViewById(R.id.comunicadosButton);
+        sobreButton = (Button) findViewById(R.id.sobreButton);
 
-//        new ParsePage().execute();
-    }
-
-
-    class ParsePage extends AsyncTask<String,Void,String>{
-
-        Elements elements = new Elements();
-
-        @Override
-        protected String doInBackground(String... params) {
-            Document doc;
-
-            try{
-                doc = Jsoup.connect("http://ifg.edu.br").get();
-                elements = doc.getElementsByClass("contentpagetitle");
-
-            }catch (IOException e){
-                e.printStackTrace();
+        principaisNoticiasButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, principaisNoticias.class);
+                startActivity(intent);
             }
+        });
 
-
-            return "rodou";
-        }
-
-        @Override
-        protected void onPostExecute(String s) {
-            super.onPostExecute(s);
-
-            Log.d("POST EXECUTE: ", "onPostExecute: rodou");
-
-            ArrayList<String> arrayList = new ArrayList<>();
-
-            for(Element e : elements){
-                arrayList.add(e.text().toString());
-                Log.d("Element e ", e.text().toString());
+        comunicadosButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Em desenvolvimento", Toast.LENGTH_LONG).show();
             }
+        });
 
-           textView.setText(arrayList.get(0).toString());
-           textView2.setText(arrayList.get(1).toString());
-           textView3.setText(arrayList.get(2).toString());
-
-        }
+        sobreButton.setOnClickListener(new View.OnClickListener() {
+            String mensagem = "Desenvolvido por: \n " +
+                    "Alex Augusto \n" +
+                    "Danielle Almeida \n" +
+                    "Milton Divino \n" +
+                    "Pedro Paulo \n" +
+                    "Professor: Marcos Roriz \n" +
+                    "IFG - Goiânia \n" +
+                    "Sistemas de Informção - Tópicos Avaçados \n";
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, mensagem, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
 }

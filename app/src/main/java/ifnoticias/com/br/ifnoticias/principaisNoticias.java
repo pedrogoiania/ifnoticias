@@ -1,9 +1,9 @@
 package ifnoticias.com.br.ifnoticias;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,7 +16,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class principaisNoticias extends AppCompatActivity {
+public class principaisNoticias extends Activity {
 
     private ListView listaCategorias;
 

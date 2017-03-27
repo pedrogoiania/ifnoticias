@@ -83,7 +83,7 @@ public class visualizaNoticia extends Activity {
                     titulo = conteudoSpan.get(0).text().toString();
                     Log.d("titulo ",titulo);
                     for(int i = 1 ; i < (conteudoSpan.size() - 1) ; i++ ) {
-                        conteudo += conteudoSpan.get(i).text().toString();
+                        conteudo += " " + conteudoSpan.get(i).text().toString();
                         Log.d("Conteudo ", conteudo);
                     }
                 }
