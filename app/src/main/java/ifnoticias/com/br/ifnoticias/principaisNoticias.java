@@ -38,7 +38,7 @@ public class principaisNoticias extends Activity {
         protected String doInBackground(String... params) {
             Document doc;
             try{
-                doc = Jsoup.connect("http://ifg.edu.br").get();
+                doc = Jsoup.connect("http://www.ifg.edu.br").get();
                 //Capturando principais noticias
                 elements = doc.getElementsByClass("contentpaneopen");
                 for(Element e : elements){

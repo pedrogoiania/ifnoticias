@@ -54,7 +54,7 @@ public class visualizaNoticia extends Activity {
             @Override
             protected String doInBackground(String... params) {
                 Document doc;
-                String connectUrl = "http://ifg.edu.br" + url;
+                String connectUrl = "http://www.ifg.edu.br" + url;
 
                 try{
 
