@@ -1,4 +1,4 @@
-package ifnoticias.com.br.ifnoticias;
+package ifnoticias.com.br.ifnoticias.Controller;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,6 +15,9 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import ifnoticias.com.br.ifnoticias.Model.Noticia;
+import ifnoticias.com.br.ifnoticias.R;
 
 public class principaisNoticias extends Activity {
 

@@ -1,4 +1,4 @@
-package ifnoticias.com.br.ifnoticias;
+package ifnoticias.com.br.ifnoticias.Controller;
 
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.util.Log;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+
+import ifnoticias.com.br.ifnoticias.R;
 
 public class Comunicados extends Activity {
 

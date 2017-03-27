@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ifnoticias.com.br.ifnoticias.visualizaNoticia">
+    tools:context="ifnoticias.com.br.ifnoticias.Controller.visualizaNoticia">
 
     <TextView
         android:id="@+id/noticiaTitulo"

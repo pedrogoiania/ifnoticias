@@ -1,4 +1,4 @@
-package ifnoticias.com.br.ifnoticias;
+package ifnoticias.com.br.ifnoticias.Controller;
 
 import android.app.Activity;
 import android.os.AsyncTask;
@@ -17,6 +17,8 @@ import org.jsoup.select.Elements;
 import org.w3c.dom.Text;
 
 import java.io.IOException;
+
+import ifnoticias.com.br.ifnoticias.R;
 
 public class visualizaNoticia extends Activity {
 
