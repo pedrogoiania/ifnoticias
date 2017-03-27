@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         textView2 = (TextView) findViewById(R.id.Texto2);
         textView3 = (TextView) findViewById(R.id.Texto3);
 
-        new ParsePage().execute();
+//        new ParsePage().execute();
     }
 
 

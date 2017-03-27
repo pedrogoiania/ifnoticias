@@ -6,8 +6,8 @@
 
     <!-- cores do ifg-->
 
-    <color name = "verdeSecundario"> #00FF00 </color>
-    <color name = "verdePrimario"> #228B22 </color>
+    <color name = "verdeSecundario">#13b913</color>
+    <color name = "verdePrimario">#228b22</color>
 
 
 </resources>

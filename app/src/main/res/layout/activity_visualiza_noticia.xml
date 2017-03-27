@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ifnoticias.com.br.ifnoticias.visualizaNoticia">
+
+    <TextView
+        android:id="@+id/noticiaTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="26dp"
+        android:background="@color/verdePrimario"
+        android:text="Titulo"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/noticiaTitulo"
+        android:layout_alignStart="@+id/noticiaTitulo"
+        android:layout_marginTop="22dp"
+        android:layout_alignEnd="@+id/noticiaTitulo"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/noticiaConteudo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/noticiaTitulo"
+                android:layout_alignStart="@+id/noticiaTitulo"
+                android:layout_below="@+id/noticiaTitulo"
+                android:background="@color/verdePrimario"
+                android:text="Conteudo da noticia"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/noticiaTitulo"
+                tools:layout_editor_absoluteX="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
