@@ -17,52 +17,118 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="25dp"
-        android:background="@color/verdePrimario"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/title_border"
         android:text="IFNotícias"
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="@android:color/background_light"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
 
-    <Button
-        android:id="@+id/principaisNoticiasButton"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/sobreButton"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="28dp"
-        android:background="@color/verdeSecundario"
-        android:text="Principais Notícias"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:layout_below="@+id/textView2">
 
-    <Button
-        android:id="@+id/comunicadosButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/principaisNoticiasButton"
-        android:layout_marginTop="19dp"
-        android:background="@color/verdeSecundario"
-        android:elevation="0dp"
-        android:text="Comunicados"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_light"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/principaisNoticiasButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView2"
+
+                android:layout_weight="1"
+                android:background="@drawable/screen_border"
+                android:text="Principais Notícias"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+
+            <Button
+                android:id="@+id/comunicadosButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/principaisNoticiasButton"
+                android:layout_marginTop="19dp"
+                android:layout_weight="1"
+                android:background="@drawable/screen_border"
+                android:elevation="0dp"
+                android:text="Comunicados"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+
+            <Button
+                android:id="@+id/agendaReitorButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/principaisNoticiasButton"
+                android:layout_marginTop="19dp"
+                android:layout_weight="1"
+                android:background="@drawable/screen_border"
+                android:elevation="0dp"
+                android:text="Agenda do Reitor"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true" />
+
+            <Button
+                android:id="@+id/eventosButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/principaisNoticiasButton"
+                android:layout_marginTop="19dp"
+                android:layout_weight="1"
+                android:background="@drawable/screen_border"
+                android:elevation="0dp"
+                android:text="Eventos"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/sobreButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="15dp"
-        android:background="@color/verdeSecundario"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/screen_border"
         android:text="sobre"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"

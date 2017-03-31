@@ -4,7 +4,7 @@
     android:id="@+id/activity_seleciona_categoria"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/verdeSecundario"
+    android:background="@android:color/background_light"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -18,20 +18,23 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:background="@color/verdePrimario"
+        android:background="@drawable/title_border"
         android:text="Principais Notícias"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
 
     <ListView
         android:id="@+id/listViewId"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/verdePrimario"
-        android:layout_below="@+id/textView"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="7dp" />
+        android:layout_below="@+id/textView"
+        android:background="@drawable/screen_border" />
 </RelativeLayout>
 

@@ -15,7 +15,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="26dp"
-        android:background="@color/verdePrimario"
+        android:background="@drawable/title_border"
         android:text="Titulo"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
@@ -30,9 +30,11 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/noticiaTitulo"
         android:layout_alignStart="@+id/noticiaTitulo"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="10dp"
         android:layout_alignEnd="@+id/noticiaTitulo"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/noticiaTitulo"
+        android:layout_alignRight="@+id/noticiaTitulo">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,13 +48,15 @@
                 android:layout_alignEnd="@+id/noticiaTitulo"
                 android:layout_alignStart="@+id/noticiaTitulo"
                 android:layout_below="@+id/noticiaTitulo"
-                android:background="@color/verdePrimario"
+                android:background="@drawable/screen_border"
                 android:text="Conteudo da noticia"
                 android:textAlignment="center"
                 android:textColor="@android:color/background_light"
                 android:textSize="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/noticiaTitulo"
-                tools:layout_editor_absoluteX="8dp" />
+                tools:layout_editor_absoluteX="8dp"
+                android:layout_alignLeft="@+id/noticiaTitulo"
+                android:layout_alignRight="@+id/noticiaTitulo" />
         </LinearLayout>
     </ScrollView>
 
