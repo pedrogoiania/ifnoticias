@@ -10,16 +10,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Controller.MainActivity">
+        <activity android:name=".View.MainActivity">
+
+        </activity>
+        <activity android:name=".View.principaisNoticias">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Controller.principaisNoticias"></activity>
         <activity android:name=".Controller.Comunicados" />
-        <activity android:name=".Controller.visualizaNoticia"></activity>
+        <activity android:name=".View.visualizaNoticia"></activity>
     </application>
 
 </manifest>

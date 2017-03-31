@@ -1,4 +1,4 @@
-package ifnoticias.com.br.ifnoticias.Controller;
+package ifnoticias.com.br.ifnoticias.View;
 
 import android.app.Activity;
 import android.os.AsyncTask;
@@ -57,7 +57,6 @@ public class visualizaNoticia extends Activity {
             protected String doInBackground(String... params) {
                 Document doc;
                 String connectUrl = "http://www.ifg.edu.br" + url;
-
                 try{
 
                     doc = Jsoup.connect(connectUrl).get();

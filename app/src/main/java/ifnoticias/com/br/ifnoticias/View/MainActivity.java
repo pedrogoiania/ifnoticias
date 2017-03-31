@@ -1,4 +1,4 @@
-package ifnoticias.com.br.ifnoticias.Controller;
+package ifnoticias.com.br.ifnoticias.View;
 
 import android.app.Activity;
 import android.content.Intent;

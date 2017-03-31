@@ -1,7 +1,8 @@
-package ifnoticias.com.br.ifnoticias.Controller;
+package ifnoticias.com.br.ifnoticias.View;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,14 +17,14 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import ifnoticias.com.br.ifnoticias.Controller.CapturaNoticia;
 import ifnoticias.com.br.ifnoticias.Model.Noticia;
 import ifnoticias.com.br.ifnoticias.R;
 
 public class principaisNoticias extends Activity {
 
     private ListView listaCategorias;
-
-    ArrayList<Noticia> noticias = new ArrayList<>();
+    private ArrayList<Noticia> noticias = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,33 +36,16 @@ public class principaisNoticias extends Activity {
 
     class ParsePage extends AsyncTask<String,Void,String> {
 
-        Elements elements = new Elements();
+        CapturaNoticia capturaNoticia = new CapturaNoticia();
 
         @Override
         protected String doInBackground(String... params) {
             Document doc;
             try{
                 doc = Jsoup.connect("http://www.ifg.edu.br").get();
-                //Capturando principais noticias
-                elements = doc.getElementsByClass("contentpaneopen");
-                for(Element e : elements){
-                    String nome = e.getElementsByTag("h2").text();
-                    String url = e.getElementsByTag("a").attr("href").toString();
-                    Elements conteudoSpan = e.getElementsByTag("p");
-                    String conteudo = "";
-                    String titulo = "";
+                Elements div = doc.select("div");
 
-                    if(conteudoSpan.size() == 2){
-                       titulo= conteudoSpan.get(0).text().toString();
-                       conteudo=conteudoSpan.get(1).text().toString();
-                    }
-
-                    if(nome!="" && url!="" && titulo!=""){
-                        Noticia noticia = new Noticia(nome,url,titulo,conteudo);
-                        noticias.add(noticia);
-                    }
-
-                }
+                capturaNoticia.capturaTitulo(div);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -98,4 +82,5 @@ public class principaisNoticias extends Activity {
             });
         }
     }
+
 }
