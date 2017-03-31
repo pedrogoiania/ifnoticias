@@ -15,53 +15,44 @@ import ifnoticias.com.br.ifnoticias.Model.Noticia;
 
 public class CapturaNoticia {
 
-    private ListView listaCategorias;
     private ArrayList<Noticia> noticias = new ArrayList<>();
 
-    public CapturaNoticia() {
-    }
-
-    public CapturaNoticia(ListView listaCategorias, ArrayList<Noticia> noticias) {
-        this.listaCategorias = listaCategorias;
+    public CapturaNoticia(ArrayList<Noticia> noticias) {
         this.noticias = noticias;
     }
 
-    public String capturaTitulo(Elements div){
-        String titulo = "";
-
+    public void capturaNoticias(Elements div){
         Elements manchete = div.select(".row-fluid");
 
         Elements p = new Elements();
         Elements h1 = new Elements();
         Elements h2 = new Elements();
-        Elements href = new Elements();
+        Elements a = new Elements();
+
+
 
         for(Element e : manchete.select(".span4")){
             p = e.select("p");
             h1 = e.select("h1");
             h2 = e.select("h2");
-            href = e.select("a[href]");
+            a = e.getElementsByTag("a");
 
             if(p.size() > 1){
-                System.out.println("Categoria: " + p.get(0).text());
+                String categoria = p.get(0).text();
+                String titulo = "";
                 if(h1.size() > 0){
-                    System.out.println("Titulo: " + h1.get(0).text());
+                   titulo =  h1.get(0).text();
                 }else{
-                    System.out.println("Titulo: " + h2.get(0).text());
+                   titulo =  h2.get(0).text();
                 }
-                System.out.println("Conteudo: " + p.get(2).text());
-                System.out.println("URL: " + href.text());
+                String conteudo =  p.get(2).text();
+                String url = a.attr("href").toString();
+
+                Noticia noticia = new Noticia(categoria,url,titulo,conteudo);
+
+                this.noticias.add(noticia);
             }
         }
-        return titulo;
-    }
-
-    public ListView getListaCategorias() {
-        return listaCategorias;
-    }
-
-    public void setListaCategorias(ListView listaCategorias) {
-        this.listaCategorias = listaCategorias;
     }
 
     public ArrayList<Noticia> getNoticias() {

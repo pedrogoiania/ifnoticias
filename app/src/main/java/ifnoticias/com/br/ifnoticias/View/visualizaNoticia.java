@@ -61,7 +61,7 @@ public class visualizaNoticia extends Activity {
 
                     doc = Jsoup.connect(connectUrl).get();
                     //Capturando principais noticias
-                    elements = doc.getElementsByClass("article-content");
+                    elements = doc.getElementsByClass("item-page");
 
 
 
@@ -79,12 +79,13 @@ public class visualizaNoticia extends Activity {
                 conteudo = "";
                 titulo = "";
                 for(Element e : elements){
-                    Elements conteudoSpan = e.getElementsByTag("p");
-                    Log.d("conteudospan ", String.valueOf(conteudoSpan.size()));
-                    titulo = conteudoSpan.get(0).text().toString();
+                    Elements h1 = e.getElementsByTag("h1");
+                    Log.d("conteudospan ", String.valueOf(h1.size()));
+                    titulo = h1.get(0).text().toString();
                     Log.d("titulo ",titulo);
-                    for(int i = 1 ; i < (conteudoSpan.size() - 1) ; i++ ) {
-                        conteudo += " " + conteudoSpan.get(i).text().toString();
+                    Elements p = e.getElementsByTag("p");
+                    for(int i = 1 ; i < (p.size() - 1) ; i++ ) {
+                        conteudo += " " + p.get(i).text().toString();
                         Log.d("Conteudo ", conteudo);
                     }
                 }

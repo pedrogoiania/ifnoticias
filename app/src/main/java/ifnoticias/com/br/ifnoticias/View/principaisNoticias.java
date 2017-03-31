@@ -36,7 +36,7 @@ public class principaisNoticias extends Activity {
 
     class ParsePage extends AsyncTask<String,Void,String> {
 
-        CapturaNoticia capturaNoticia = new CapturaNoticia();
+        CapturaNoticia capturaNoticia = new CapturaNoticia(noticias);
 
         @Override
         protected String doInBackground(String... params) {
@@ -45,7 +45,7 @@ public class principaisNoticias extends Activity {
                 doc = Jsoup.connect("http://www.ifg.edu.br").get();
                 Elements div = doc.select("div");
 
-                capturaNoticia.capturaTitulo(div);
+                capturaNoticia.capturaNoticias(div);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -62,7 +62,7 @@ public class principaisNoticias extends Activity {
                     getApplicationContext(),
                     android.R.layout.simple_list_item_1,
                     android.R.id.text1 ,
-                    noticias
+                    capturaNoticia.getNoticias()
             );
 
             listaCategorias.setAdapter(adaptador);
