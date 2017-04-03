@@ -40,13 +40,13 @@ public class MainActivity extends Activity {
         });
 
         sobreButton.setOnClickListener(new View.OnClickListener() {
-            String mensagem = "Desenvolvido por: \n " +
-                    "Alex Augusto \n" +
+            String mensagem = "Desenvolvido por: \n" +
+                    "Alex Augusto, " +
                     "Danielle Almeida \n" +
-                    "Milton Divino \n" +
+                    "Milton Divino, " +
                     "Pedro Paulo \n" +
                     "Professor: Marcos Roriz \n" +
-                    "IFG - Goiânia \n" +
+                    "IFG - Goiânia ~ " +
                     "Sistemas de Informção - Tópicos Avaçados \n";
             @Override
             public void onClick(View v) {
