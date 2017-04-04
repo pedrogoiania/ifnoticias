@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ifnoticias.com.br.ifnoticias.View.MainActivity">
+    tools:context="ifnoticias.com.br.ifnoticias.View.ComunicadosNoticias">
 
 
     <TextView
@@ -19,7 +19,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
         android:background="@drawable/title_border"
-        android:text="Principais Notícias"
+        android:text="Comunicados"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"

@@ -10,8 +10,8 @@
         android:label="IFNotícias"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".View.SplashScreen"
+        <activity
+            android:name=".View.SplashScreen"
             android:label="IFNotícias">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity android:name=".View.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,10 +26,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.principaisNoticias">
-
-        </activity>
-        <activity android:name=".View.visualizaNoticia"></activity>
+        <activity android:name=".View.principaisNoticias"></activity>
+        <activity android:name=".View.visualizaNoticia" />
+        <activity android:name=".View.ComunicadosNoticias"></activity>
     </application>
 
 </manifest>

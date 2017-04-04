@@ -75,7 +75,6 @@ public class visualizaNoticia extends Activity {
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 String connectUrl = "http://ifg.edu.br" + url;
-                Log.d("Article content",elements.text().toString());
                 conteudo = "";
                 titulo = "";
                 for(Element e : elements){
@@ -84,7 +83,7 @@ public class visualizaNoticia extends Activity {
                     titulo = h1.get(0).text().toString();
                     Log.d("titulo ",titulo);
                     Elements p = e.getElementsByTag("p");
-                    for(int i = 1 ; i < (p.size() - 1) ; i++ ) {
+                    for(int i = 0 ; i < (p.size() - 1) ; i++ ) {
                         conteudo += " " + p.get(i).text().toString();
                         Log.d("Conteudo ", conteudo);
                     }

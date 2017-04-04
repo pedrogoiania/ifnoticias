@@ -34,7 +34,8 @@
         android:layout_alignEnd="@+id/noticiaTitulo"
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/noticiaTitulo"
-        android:layout_alignRight="@+id/noticiaTitulo">
+        android:layout_alignRight="@+id/noticiaTitulo"
+        android:layerType="software">
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -35,7 +35,8 @@ public class MainActivity extends Activity {
         comunicadosButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Em desenvolvimento", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, ComunicadosNoticias.class);
+                startActivity(intent);
             }
         });
 
