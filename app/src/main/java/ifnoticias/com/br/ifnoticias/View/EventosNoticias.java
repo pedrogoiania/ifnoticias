@@ -1,24 +1,27 @@
 package ifnoticias.com.br.ifnoticias.View;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+
 import java.io.IOException;
 import java.util.ArrayList;
+
 import ifnoticias.com.br.ifnoticias.Controller.CapturaNoticia;
 import ifnoticias.com.br.ifnoticias.Model.Noticia;
 import ifnoticias.com.br.ifnoticias.R;
 
-public class ComunicadosNoticias extends Activity {
+public class EventosNoticias extends AppCompatActivity {
 
     private ListView listaCategorias;
     private ArrayList<Noticia> noticias = new ArrayList<>();
@@ -26,9 +29,9 @@ public class ComunicadosNoticias extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_comunicados_noticias);
+        setContentView(R.layout.activity_eventos_noticias);
         listaCategorias = (ListView) findViewById(R.id.listViewId);
-        new ComunicadosNoticias.ParsePage().execute();
+        new ParsePage().execute();
     }
 
     class ParsePage extends AsyncTask<String,Void,String> {
@@ -42,7 +45,7 @@ public class ComunicadosNoticias extends Activity {
                 doc = Jsoup.connect("http://www.ifg.edu.br").get();
                 Elements div = doc.select("div");
 
-                capturaNoticia.capturaComunicado(div);
+                capturaNoticia.capturaEventos(div);
             }catch (IOException e){
                 e.printStackTrace();
             }
@@ -69,7 +72,7 @@ public class ComunicadosNoticias extends Activity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     int codigoPosicao = position;
                     Noticia noticia = (Noticia) listaCategorias.getItemAtPosition(codigoPosicao);
-                    Intent intent = new Intent(ComunicadosNoticias.this, visualizaNoticia.class);
+                    Intent intent = new Intent(EventosNoticias.this, visualizaNoticia.class);
                     intent.putExtra("titulo", noticia.getTitulo());
                     intent.putExtra("conteudo", noticia.getConteudo());
                     intent.putExtra("url", noticia.getUrl());

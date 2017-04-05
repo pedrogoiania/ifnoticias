@@ -3,8 +3,7 @@
     package="ifnoticias.com.br.ifnoticias">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission
-        android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
 
     <application
         android:allowBackup="true"
@@ -28,9 +27,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.principaisNoticias"></activity>
-        <activity android:name=".View.visualizaNoticia" />
-        <activity android:name=".View.ComunicadosNoticias"></activity>
+        <activity android:name=".View.principaisNoticias" />
+        <activity android:name=".View.ComunicadosNoticias" />
+        <activity android:name=".View.EventosNoticias"></activity>
     </application>
 
 </manifest>

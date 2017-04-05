@@ -13,6 +13,8 @@ public class MainActivity extends Activity {
 
     Button principaisNoticiasButton;
     Button comunicadosButton;
+    Button eventosButton;
+    Button agendaReitorButton;
     Button sobreButton;
 
     @Override
@@ -22,7 +24,9 @@ public class MainActivity extends Activity {
 
         principaisNoticiasButton = (Button) findViewById(R.id.principaisNoticiasButton);
         comunicadosButton = (Button) findViewById(R.id.comunicadosButton);
+        eventosButton = (Button) findViewById(R.id.eventosButton);
         sobreButton = (Button) findViewById(R.id.sobreButton);
+        agendaReitorButton = (Button) findViewById(R.id.agendaReitorButton);
 
         principaisNoticiasButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,11 +36,27 @@ public class MainActivity extends Activity {
             }
         });
 
+        eventosButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EventosNoticias.class);
+                startActivity(intent);
+            }
+        });
+
         comunicadosButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ComunicadosNoticias.class);
                 startActivity(intent);
+            }
+        });
+
+        agendaReitorButton.setOnClickListener(new View.OnClickListener() {
+            String mensagem = "Em Desenvolvimento";
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, mensagem, Toast.LENGTH_LONG).show();
             }
         });
 
