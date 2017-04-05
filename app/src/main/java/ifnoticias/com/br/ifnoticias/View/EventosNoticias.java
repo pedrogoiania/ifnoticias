@@ -1,5 +1,6 @@
 package ifnoticias.com.br.ifnoticias.View;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -21,7 +22,7 @@ import ifnoticias.com.br.ifnoticias.Controller.CapturaNoticia;
 import ifnoticias.com.br.ifnoticias.Model.Noticia;
 import ifnoticias.com.br.ifnoticias.R;
 
-public class EventosNoticias extends AppCompatActivity {
+public class EventosNoticias extends Activity {
 
     private ListView listaCategorias;
     private ArrayList<Noticia> noticias = new ArrayList<>();

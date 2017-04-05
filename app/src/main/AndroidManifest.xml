@@ -29,7 +29,8 @@
         </activity>
         <activity android:name=".View.principaisNoticias" />
         <activity android:name=".View.ComunicadosNoticias" />
-        <activity android:name=".View.EventosNoticias"></activity>
+        <activity android:name=".View.EventosNoticias" />
+        <activity android:name=".View.AgendaReitor"></activity>
     </application>
 
 </manifest>
