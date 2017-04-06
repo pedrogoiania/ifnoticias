@@ -23,7 +23,7 @@ public class SplashScreen extends Activity {
         shortcutIntent.setAction(Intent.ACTION_MAIN);
         Intent addIntent = new Intent();
         addIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutIntent);
-        addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "nomeDaApp");
+        addIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "IF Notícias");
         addIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(getApplicationContext(), R.mipmap.ic_launcher));
         addIntent.setAction("com.android.launcher.action.INSTALL_SHORTCUT");
         addIntent.putExtra("duplicate", false);  //may it's already there so don't duplicate
